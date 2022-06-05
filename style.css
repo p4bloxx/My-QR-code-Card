@@ -1,0 +1,94 @@
+/*general rules reset*/
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/*all styles rules*/
+:root{
+    --ff-Outfit: 'Outfit', sans-serif;
+    --fw-rg: 400;
+    --fw-bld: 700;
+
+    --bg-card: hsl(0, 0%, 100%);
+    --bg-body:  hsl(212, 45%, 89%);
+    --clr-p:  hsl(220, 15%, 55%);
+    --clr-title: hsl(218, 44%, 22%);
+
+    --fs-body: 0.9375em;
+    --fs-title: 1.375em;
+}
+
+
+body{
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.2;
+    background-color: var(--bg-body);
+    font-family: var(--ff-Outfit);
+    text-align: center;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+}
+
+
+/*main grid container*/
+.component-card{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-inline: auto;
+    max-width: min(85%, 25em);
+    background-color: var(--bg-card);
+    padding: 1rem;
+    border-radius: 1.2rem;
+    box-shadow: 0em 2rem 4rem -3rem rgba(0, 0, 0, 0.2);
+}
+
+.qr-image img{
+    aspect-ratio: 1 / 1;
+    border-radius: .6rem;
+    width: 100%;
+}
+
+.title{
+    font-size: var(--fs-title);
+    margin-block: 1rem;
+    color: var(--clr-title);
+    font-weight: var(--fw-bld);
+}
+
+.component-card p{
+    font-size: var(--fs-body);
+    margin-block-end: 2rem;
+    color: var(--clr-p);
+    font-weight: var(--fw-rg);
+}
+
+.text{
+    padding-inline: 1rem;
+}
+
+/*rules for desktop size*/
+@media screen and (min-width: 62em) {
+    .component-card{
+        max-width: min(52%, 90em);
+    }
+
+}
+
+
+.attribution {
+    font-size: 0.75rem;
+    margin-top: 2.5rem;
+}
